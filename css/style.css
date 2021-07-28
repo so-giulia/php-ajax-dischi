@@ -44,6 +44,25 @@ header nav ul a:hover, header nav ul a:visited,
 header nav ul a:active, header nav ul a:focus{
     color:#000;
     text-decoration: none;
+    position: relative;
+}
+
+header nav ul a::after{
+    content:'';
+    display: inline-block;
+    position:absolute;
+    bottom:-3px;
+    left:0;
+    height: 1px;
+    background-color: #000;
+    width: 0;
+    transition: .4s ease;
+}
+
+header nav ul a:hover::after{
+    width: 100%;
+    transition: .4s ease;
+
 }
 
 /* ————————————————————————————————— */
@@ -71,6 +90,8 @@ h1{
 
 .artist a, .artist a:hover,
 .artist a:focus, .artist a:visited{
+    width: 100%;
+    height: 100%;
     text-decoration: none;
     color: rgba(0, 0, 0, 0.7);
 }
@@ -93,11 +114,14 @@ h1{
     height: calc(100vh - 235px);
 }
 
+
+
 .item{
     position:relative;
 
     width:33.333%;
     padding:20px;
+    cursor: pointer;
 }
 
 
@@ -124,7 +148,9 @@ h1{
 }
 
 .img-col{
-    width:35%;
+    width: 35%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .text-col{
@@ -135,6 +161,13 @@ h1{
 .item img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    transform: scale(1.05);
+    transition: transform .4s ease;
 } 
+
+.item:hover img{
+    transform: scale(1.15);
+    transition: transform .4s ease;
+}
+
 
