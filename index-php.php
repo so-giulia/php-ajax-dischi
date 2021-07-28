@@ -19,7 +19,7 @@
 </head>
 <body>
     <header class="flex-row justify-between">
-        <h1>Ascolti recenti <br>da Spotify</h1>
+        <h1>Ascolti Recenti <br>Spotify</h1>
 
         <nav>
             <ul class="flex-row">
@@ -32,9 +32,35 @@
     <main>
         <div class="albums flex-row">
             <?php foreach($albums as $item){ ?>
-                <div class="item">
-                    hey
+                <!-- album item start -->
+                <div class="item flex-row">
+                    <!-- album image -->
+                    <div class="img-col">
+                        <img src="<?php echo $item['poster'] ?>" alt="<?php echo $item['title'] ?>">
+                    </div>
+                    
+
+                    <!-- album txt start -->
+                    <div class="text-col flex-column justify-between">
+                        <!-- Title + artist start -->
+                        <div class="details-upper">
+                            <h3 class="title"><?php echo $item['title'] ?></h3>
+                            <p class="artist">
+                                By
+                                <a href="#">
+                                    <?php echo $item['artist'] ?>
+                                </a>
+                            </p>
+                        </div>
+                        <!-- Title + artist end -->
+
+                        <!-- year start -->
+                        <p class="year"><?php echo $item['year'] ?></p>
+                        <!-- year end -->
+                    </div>
+                    <!-- album txt end -->
                 </div>
+                <!-- album item end -->
             <?php } ?>
         </div>
     </main>
