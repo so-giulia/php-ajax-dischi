@@ -54,5 +54,5 @@ $albums =[
         'year' => 2001,
         'poster' => 'https://m.media-amazon.com/images/I/81zgfNRFQhL._SS500_.jpg'
     ]
-]
+];
 ?>
