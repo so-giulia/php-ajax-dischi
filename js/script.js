@@ -39,6 +39,8 @@ const app = new Vue(
                             this.albums.push(item);
                         }
                     });
+                }else{
+                    this.albums = this.support;
                 }
             }
         }
