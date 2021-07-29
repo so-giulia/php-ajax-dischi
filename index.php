@@ -38,41 +38,37 @@
 
         <!-- Main start -->
         <main>
+            <!-- album container start -->
             <div class="albums flex-row">
-                <?php // foreach($albums as $item){ ?>
-                    
-                    <!-- album item start -->
-                    <div class="item flex-row">
-                        <!-- album image -->
-                        <div class="img-col">
-                            <img src="<?php // echo $item['poster'] ?>" alt="<?php // echo $item['title'] ?>">
-                        </div>
-                        
-
-                        <!-- album txt start -->
-                        <div class="text-col flex-column justify-between">
-                            <!-- Title + artist start -->
-                            <div class="details-upper">
-                                <h3 class="title"><?php // echo $item['title'] ?></h3>
-                                <p class="artist">
-                                    By
-                                    <a href="#">
-                                        <?php // echo $item['artist'] ?>
-                                    </a>
-                                </p>
-                            </div>
-                            <!-- Title + artist end -->
-
-                            <!-- year start -->
-                            <p class="year"><?php // echo $item['year'] ?></p>
-                            <!-- year end -->
-                        </div>
-                        <!-- album txt end -->
+                <!-- album item start -->
+                <div class="item flex-row" v-for="album in albums">
+                    <!-- album image start -->
+                    <div class="img-col">
+                        <img :src="album.poster" alt="album.title">
                     </div>
-                    <!-- album item end -->
+                    <!-- album image end -->
+                        
+                    <!-- album txt start -->
+                    <div class="text-col flex-column justify-between">
+                        <!-- Title + artist start -->
+                        <div class="details-upper">
+                            <h3 class="title">{{album.title}}</h3>
 
-                <?php // } ?>
+                            <p class="artist">
+                                By <a href="#">{{album.artist}}</a>
+                            </p>
+                        </div>
+                        <!-- Title + artist end -->
+
+                        <!-- year start -->
+                        <p class="year">{{album.year}}</p>
+                        <!-- year end -->
+                    </div>
+                    <!-- album txt end -->
+                </div>
+                <!-- album item end -->
             </div>
+            <!-- album container end -->
         </main>
         <!-- Main end -->
     </div>
