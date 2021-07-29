@@ -21,20 +21,24 @@
 
     <title>Dischi con Vue</title>
 </head>
+
 <body>
     <div id="app">
         <!-- Header start -->
-        <header class="flex-row justify-between">
-            <h1>Ascolti Recenti <br>Spotify</h1>
-
-            <nav>
-                <ul class="flex-row">
-                    <li><a href="#">Generi,</a></li>
-                    <li><a href="#">Playlist</a></li>
-                    </ul>
-            </nav>        
+        <header>
+            <div class="button"> <a href="#">Spotify</a> </div>    
+            <h1>Dischi obiettivamente molto belli che mi sentirei di consigliare</h1>
         </header>
         <!-- Header end -->
+
+        <!-- Select start -->
+        <section class="filters">
+            <select name="genres" @change="filterByGenre">
+                <option v-for="genre in genres" :value="genre">{{genre}}</option>
+                <option>test</option>
+            </select>
+        </section>
+        <!-- Select end -->
 
         <!-- Main start -->
         <main>
@@ -73,7 +77,6 @@
         <!-- Main end -->
     </div>
     
-
 
     <!-- Script -->
     <script src="js/script.js">

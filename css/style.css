@@ -6,6 +6,11 @@
 
 body{
     font-family: 'Gothic A1', sans-serif;
+    background-color: rgb(244, 240, 227);
+}
+
+header, main, section{
+    padding:50px 80px;
 }
 
 /* —————————————————————————————————— */
@@ -22,12 +27,6 @@ body{
 /* ———————————————————————————————————— */
 /* —————————————— Header —————————————— */
 /* ———————————————————————————————————— */
-
-header{
-    padding:20px;
-    height:215px;
-    margin-bottom:20px;
-}
 
 header nav ul{
     list-style: none;
@@ -74,9 +73,11 @@ header nav ul a:hover::after{
 }
 
 h1{
+    width: 60%;
+    margin-top:150px;
     font-size: 4.5rem;
-    line-height: 1.2;
-    font-weight: 600;
+    line-height: 1;
+    font-weight: 500;
 }
 
 .details-upper .title{
@@ -105,16 +106,19 @@ h1{
     font-weight: 500;
 }
 
+
+/* ————————————————————————————————————— */
+/* —————————————— Filters —————————————— */
+/* ————————————————————————————————————— */
+
+.filters{
+    background-color: #ffcb30;
+    margin:100px 0 50px;
+}
+
 /* ——————————————————————————————————— */
 /* —————————————— Items —————————————— */
 /* ——————————————————————————————————— */
-
-
-.albums{
-    height: calc(100vh - 235px);
-}
-
-
 
 .item{
     position:relative;
