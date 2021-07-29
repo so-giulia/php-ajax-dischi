@@ -1,7 +1,7 @@
 <?php
 $albums =[
     [
-        'title' => 'Suspiria (Music for the Luca Guadagnino Film)',
+        'title' => 'Suspiria',
         'artist' => 'Thom Yorke',
         'year' => 2018,
         'poster' => 'https://m.media-amazon.com/images/I/71L4vE3fOjL._SS500_.jpg',
@@ -99,7 +99,7 @@ $albums =[
         'genres' => ['alternative', 'rock']
     ],
     [
-        'title' => 'The Battle of Los Angeles',
+        'title' => 'The Battle of L.A.',
         'artist' => 'Rage Against The Machine',
         'year' => 1999,
         'poster' => 'https://images-na.ssl-images-amazon.com/images/I/81-vO7ZkqnL._AC_SL1500_.jpg',

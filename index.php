@@ -24,18 +24,34 @@
 
 <body>
     <div id="app">
-        <!-- Header start -->
         <header>
-            <div class="button"> <a href="#">Spotify</a> </div>    
-            <h1>Dischi obiettivamente molto belli che mi sentirei di consigliare</h1>
+            <div class="navigation flex-row justify-between align-center">
+                <div class="logo">musichina <strong>inc.</strong></div>
+
+                    <div class="nav flex-row align-center">
+                        <div class="hamburger">
+                        <span class="hamb"></span>
+                        <span class="hamb"></span>
+                        <span class="hamb"></span>
+                    </div>
+
+                    <div class="button">
+                        <a href="#">Spotify</a>
+                        <div class="anim-bg"></div>
+                    </div>
+                </div>
+            </div>
         </header>
-        <!-- Header end -->
+
+        <!-- title start -->
+        <h1>Dischi obiettivamente molto belli che mi sentirei di consigliare</h1>
+        <!-- title end -->
 
         <!-- Select start -->
-        <section class="filters">
+        <section class="filters flex-row justify-center align-center">
+            <h3 class="filter-title">Filtra per genere:</h3>
             <select name="genres" @change="filterByGenre">
                 <option v-for="genre in genres" :value="genre">{{genre}}</option>
-                <option>test</option>
             </select>
         </section>
         <!-- Select end -->
@@ -46,29 +62,20 @@
             <div class="albums flex-row">
                 <!-- album item start -->
                 <div class="item flex-row" v-for="album in albums">
-                    <!-- album image start -->
-                    <div class="img-col">
-                        <img :src="album.poster" alt="album.title">
-                    </div>
-                    <!-- album image end -->
-                        
-                    <!-- album txt start -->
-                    <div class="text-col flex-column justify-between">
-                        <!-- Title + artist start -->
-                        <div class="details-upper">
-                            <h3 class="title">{{album.title}}</h3>
+                   <!-- image start -->
+                    <img :src="album.poster" alt="album.title">
+                    <div class="img-layover"></div>
+                    <!-- image end -->
 
-                            <p class="artist">
-                                By <a href="#">{{album.artist}}</a>
-                            </p>
-                        </div>
-                        <!-- Title + artist end -->
+                    <!-- details start -->
+                    <div class="album-details flex-row justify-between align-center">
+                        <p class="p-details p-accent">{{album.title}}</p>
 
-                        <!-- year start -->
-                        <p class="year">{{album.year}}</p>
-                        <!-- year end -->
+                        <p class="p-details">
+                            <a href="#">{{album.artist}}</a>
+                        </p>
                     </div>
-                    <!-- album txt end -->
+                    <!-- details end -->
                 </div>
                 <!-- album item end -->
             </div>
