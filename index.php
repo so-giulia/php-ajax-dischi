@@ -36,7 +36,7 @@
                     </div>
 
                     <div class="button">
-                        <a href="#">Spotify</a>
+                        <a href="https://open.spotify.com/user/1191979053?si=f36ae36388d84c63" target="_blank">Spotify</a>
                         <div class="anim-bg"></div>
                     </div>
                 </div>
